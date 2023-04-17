@@ -13,7 +13,7 @@ const Navbar = () => {
               <Link href={'/'} className=''> <SiHomeadvisor/> </Link> 
         </div>
         <div className='text-3xl sm:text-4xl lg:text-5xl sm:my-4 hover:text-blue-800 mx-2 sm:mx-0' >
-        <Link href={'/'}>  <SiGooglemessages/> </Link> 
+        <Link href={'/components/Messages'} as={'/Messages'}>  <SiGooglemessages/> </Link> 
         </div>
         <div className='text-3xl sm:text-4xl lg:text-5xl sm:my-4 hover:text-blue-800 mx-2 sm:mx-0' >
         <Link href={'/'}>  <IoMdNotifications/> </Link> 

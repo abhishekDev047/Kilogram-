@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
-import notice from '../data/notice';
+import {notice} from '../data/notice';
 import Image from 'next/image';
 
 

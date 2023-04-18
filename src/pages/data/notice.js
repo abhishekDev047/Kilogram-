@@ -1,4 +1,4 @@
-const notice = [
+ export const notice = [
     {
       id: 1,
       type: 'like',
@@ -105,5 +105,3 @@ const notice = [
       read: false
     }
 ];
-
-export default notice;

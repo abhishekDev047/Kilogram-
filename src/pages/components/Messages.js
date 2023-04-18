@@ -20,11 +20,11 @@ const Messages = () => {
             catch(error){
                 console.log(error)
             }                 
-    });
+    },[]);
 
 useEffect(()=>{
 get()
-},[])
+})
 
 console.log(items)
 

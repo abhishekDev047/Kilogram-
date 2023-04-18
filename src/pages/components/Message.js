@@ -20,11 +20,11 @@ const Message = ({x, func}) => {
             catch(error){
                 console.log(error)
             }                 
-    });
+    },[]);
 
 useEffect(()=>{
 get()
-},[])
+})
 console.log(items)
   return (
     <div className='flex flex-col text-lg w-full'>

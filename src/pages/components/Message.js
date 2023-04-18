@@ -38,7 +38,7 @@ console.log(items)
 
             if(user.id === x){
                 return(
-                                     <div className='flex flex-row '>
+                                     <div className='flex flex-row ' key={index}>
             <div className='ml-3'>
                 <Image 
                 alt='Kologram user'

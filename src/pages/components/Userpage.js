@@ -16,11 +16,11 @@ const UserPage = () => {
             catch(error){
                 console.log(error)
             }                 
-    });
+    },[]);
 
 useEffect(()=>{
 get()
-},[])
+})
 
 // useEffect(() => {
 // console.log(items);

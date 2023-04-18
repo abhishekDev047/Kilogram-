@@ -1,8 +1,12 @@
 import { useState,useEffect, useCallback } from "react";
 import Posts from "./Posts";
+import Head from "next/head";
+
 
 useState
 const HomePage = () => {
+
+    <Head> <title>Kilogram- connect with peoples</title></Head>
 
     const [items, setItems] = useState([]);
 

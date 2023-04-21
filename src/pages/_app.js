@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import Navbar from './components/Navbar'
 import { Provider } from 'react-redux'
-import { store } from '@/state/store'
+import { store } from '@/store/store'
 
 export default function App({ Component, pageProps }) {
  
@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
     <Navbar />
     </div> 
 
-    <div className=' px-2 sm:mt-1 sm:w-11/12'>
+    <div className=' px-2  sm:w-11/12'>
   <Component {...pageProps} />
     </div>
   </div>

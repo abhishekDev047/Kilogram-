@@ -6,7 +6,7 @@ import { BsArrowLeft,BsSend } from "react-icons/bs";
 
 const Message = ({x, func}) => {
     const userId = useSelector(state =>{state.userId});
-    console.log(userId)
+    // console.log(userId)
     const [items, setItems] = useState([])
     const get = useCallback(async ()=>{
         try{
@@ -25,7 +25,7 @@ const Message = ({x, func}) => {
 useEffect(()=>{
 get()
 })
-console.log(items)
+// console.log(items)
   return (
     <div className='flex flex-col text-lg w-full'>
     <div className='flex flex-row mb-1 '>

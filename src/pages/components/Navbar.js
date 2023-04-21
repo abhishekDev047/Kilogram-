@@ -7,7 +7,7 @@ import { FaUserAlt,FaUsers } from "react-icons/fa";
 import { TbLayoutNavbarExpand, TbLayoutNavbarCollapse } from "react-icons/tb";
 
 const Navbar = () => {
- const [drop, setDrop] = useState('hidden')
+ const [drop, setDrop] = useState('hidden')  
   return (
     <>
     <div className='sm:px-3 left-0  bg-slate-300 sm:h-full flex sm:flex-col fixed sm:w-auto w-full px-2 z-10'>

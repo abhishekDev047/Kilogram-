@@ -26,7 +26,7 @@ useEffect(()=>{
 get()
 })
 
-console.log(items)
+// console.log(items)
 
 const change = ()=>{
     setShow(false)

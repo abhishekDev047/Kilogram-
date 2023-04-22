@@ -17,7 +17,7 @@ const Profile = () => {
 
     <div>
         <Image 
-            src={'/images/profile.jpg'}
+            src={'/images/profile.JPG'}
             height={600}
             width={600}
             alt='user Profile'

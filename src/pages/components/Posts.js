@@ -2,12 +2,15 @@ import Image from 'next/legacy/image';
 import React, { useRef } from 'react';
 import { AiFillLike
 } from "react-icons/ai";
+import { useSelector } from 'react-redux';
 
 const Posts = ({first, last, pic, img, likes, date,text}) => {
     const caption = `${first} ${last} : " ${text} "`;
     const myRef = useRef();
+    const mode = useSelector((state)=>state.mode.value);
   return (
-    <div className='flex flex-col my-3  md:w-5/12 md:mx-auto bg-slate-50 rounded-md'>
+    <div className={mode}>
+    <div className='flex flex-col my-3 w-full mx-auto bg-slate-50 rounded-md dark:bg-gray-950'>
         <div className='flex'><div className='px-3 py-1'> 
         <Image 
             alt='Kilogram user'
@@ -26,10 +29,10 @@ const Posts = ({first, last, pic, img, likes, date,text}) => {
             <Image 
              alt='Kilogram user'
              layout='intrinsic'
-            width={500}
-            height={500}
+            width={600}
+            height={450}
             src={img}
-            className='rounded-sm mx-auto'
+            className='rounded-sm mx-auto self-center'
         />
         </div>
         <div className='flex flex-col px-3'>
@@ -40,6 +43,7 @@ const Posts = ({first, last, pic, img, likes, date,text}) => {
                 <p className='text-xl px-3'ref={myRef}> <button onClick={()=>{myRef.current.color='blue'}}><AiFillLike /></button> {likes}</p>
             </div>
         </div>
+    </div>
     </div>
   )
 }

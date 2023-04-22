@@ -30,7 +30,7 @@ const HomePage = () => {
     //     console.log(items);
     //     }, [items]);
  return(
-    <div className=" flex flex-col md:flex-row flex-wrap px-2 py-1">
+    <div className=" flex flex-col items-center  px-2 py-1">
      {items.map((item,index)=>(
         <Posts key={index} pic={item.owner.picture} first={item.owner.firstName} last={item.owner.lastName} likes={item.likes} img={item.image} text={item.text} date={item.publishDate} />
        ))}

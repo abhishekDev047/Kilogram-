@@ -1,8 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Users from './Users';
+import { useSelector } from 'react-redux';
 
 const UserPage = () => {
     const [items, setItems] = useState([])
+    const mode = useSelector((state)=>state.mode.value);
 
     const get = useCallback(async ()=>{
         try{
@@ -26,10 +28,12 @@ get()
 // console.log(items);
 // }, [items]);
 return (
-<div className=' flex flex-col flex-wrap sm:flex-row '>
+    <div className={mode}>
+<div className=' flex flex-col flex-wrap sm:flex-row w-full sm:justify-center dark:bg-slate-900 dark:text-white '>
 {items.map((user, index)=>(
 <Users first={user.firstName} last={user.lastName} title={user.title} pic={user.picture} key={index} />
 ))}
+</div>
 </div>
 )
 }

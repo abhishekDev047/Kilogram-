@@ -2,11 +2,13 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Message from './Message';
 import {BsFillSendPlusFill} from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 const Messages = () => {
     const [items, setItems] = useState([]);
     const [show, setShow] = useState(false);
     const [user, setUser] = useState('');
+    const mode = useSelector((state)=>state.mode.value);
 
     const get = useCallback(async ()=>{
         try{
@@ -39,10 +41,10 @@ if(show === true){
 }
 else{
      return (
-    <>
-    <div className=' flex flex-col flex-wrap sm:flex-row '>
+    <div className={mode}>
+    <div className=' flex flex-col flex-wrap sm:flex-row w-full sm:justify-center dark:bg-slate-900 dark:text-white'>
 {items.map((user, index)=>(
- <div className='flex flex-row p-3 sm:w-5/12 bg-slate-200 rounded-lg m-3' key={index} >
+ <div className='flex flex-row p-3 sm:w-5/12 bg-slate-200 rounded-lg m-3 dark:bg-slate-800' key={index} >
            <div>
                 <Image 
                 alt='Klogram user'
@@ -59,7 +61,7 @@ else{
     </div>
 ))}
 </div>     
-  </>
+  </div>
   )
 }
  

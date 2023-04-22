@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React, { useCallback, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import { BsArrowLeft,BsSend } from "react-icons/bs";
+import { useSelector } from 'react-redux';
 
 
 const Message = ({x, func}) => {
-    const userId = useSelector(state =>{state.userId});
+    const mode = useSelector((state)=>state.mode.value);
     // console.log(userId)
     const [items, setItems] = useState([])
     const get = useCallback(async ()=>{
@@ -27,10 +27,11 @@ get()
 })
 // console.log(items)
   return (
-    <div className='flex flex-col text-lg w-full'>
-    <div className='flex flex-row mb-1 '>
+    <div className={mode}>
+    <div className='flex flex-col text-lg w-full dark:bg-slate-900 dark:text-white pt-3'>
+    <div className='flex flex-row mb-1 fixed z-10 top-16 sm:top-20 left-0 bg-slate-400 py-1 dark:bg-gray-950 w-full'>
     <div className='mx-3'>
-        <button onClick={func} className='text-lg bg-slate-200 hover:bg-slate-100 px-3 py-1 '> <BsArrowLeft/>
+        <button onClick={func} className='text-lg bg-slate-200 hover:bg-slate-100 px-3 py-1  dark:bg-slate-700'> <BsArrowLeft/>
          </button>
     </div>
     <div>
@@ -60,21 +61,22 @@ get()
        
         })}
     </div>
-    </div><hr />
+    <hr /></div>
 
-    <div>
+    <div className=' h-screen pt-10 sm:pt-8 px-3'>
         You are not able to send text right now, as i am still working on this site and trying to setting up the chatbot. 
     </div>
-    <div className='flex flex-row fixed bg-white w-full sm:w-[90.9%] md:w-[91%] lg:w-[93%] overflow-hidden ml-10 bottom-0 right-0'>
+    <div className='flex flex-row fixed bg-transparent w-full px-1 ml-10 bottom-1 right-0'>
         <div className='w-4/5 pl-3'>
-        <input type="text"  className='w-full px-2 py-1 border border-slate-400 rounded-2xl'/>
+        <input type="text"  className='w-full px-2 py-1 border  bg-transparent border-black dark:border-white rounded-2xl'/>
     </div>
-    <div className='ml-3'>
-        <button className='text-xl my-auto text-blue-900'><BsSend/> </button>
+    <div className='pr-0 flex flex-col items-center w-fit'>
+        <button className='text-2xl my-auto text-blue-900 px-3'><BsSend/> </button>
     </div>
     </div>
     
 
+    </div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Users = ({first, last, pic, title}) => {
   return (
-    <div className='flex flex-row p-3 sm:w-5/12 '>
+    <div className='flex flex-row p-3 sm:w-5/12 bg-slate-100 rounded-lg m-3 dark:bg-slate-800 '>
             <div>
                 <Image 
                 alt='Kologram user'

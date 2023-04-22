@@ -63,14 +63,14 @@ get()
     </div>
     <hr /></div>
 
-    <div className=' h-screen pt-10 sm:pt-8 px-3'>
+    <div className=' h-screen pt-10 sm:pt-8 px-3 w-full'>
         You are not able to send text right now, as i am still working on this site and trying to setting up the chatbot. 
     </div>
-    <div className='flex flex-row fixed bg-transparent w-full px-1 ml-10 bottom-1 right-0'>
-        <div className='w-4/5 pl-3'>
+    <div className='flex flex-row  bg-white dark:bg-slate-900 fixed bottom-0 right-0 h-40  w-full px-1 ml-10 pb-10'>
+        <div className='w-4/5 pl-3 pt-24'>
         <input type="text"  className='w-full px-2 py-1 border  bg-transparent border-black dark:border-white rounded-2xl'/>
     </div>
-    <div className='pr-0 flex flex-col items-center w-fit'>
+    <div className='pr-0 flex flex-col items-center w-fit pt-24'>
         <button className='text-2xl my-auto text-blue-900 px-3'><BsSend/> </button>
     </div>
     </div>

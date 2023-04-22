@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Message from './Message';
 import {BsFillSendPlusFill} from 'react-icons/bs';
-import { useSelector } from 'react-redux';
+import {useSelector } from 'react-redux';
 
 const Messages = () => {
     const [items, setItems] = useState([]);

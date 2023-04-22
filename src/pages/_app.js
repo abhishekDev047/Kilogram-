@@ -8,12 +8,12 @@ export default function App({ Component, pageProps }) {
       return (
         <>
         <Provider store={store}>
-      <div className='flex flex-col sm:flex-row   '>
-    <div className=' px-2  sm:w-1/12 w-full h-10 sm:h-screen'> 
+      <div className='flex flex-col'>
+    <div className=' px-2  w-full h-14 sm:h-20 '> 
     <Navbar />
     </div> 
 
-    <div className=' px-2  sm:w-11/12'>
+    <div className=' px-2 w-full'>
   <Component {...pageProps} />
     </div>
   </div>

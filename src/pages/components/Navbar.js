@@ -10,7 +10,11 @@ const Navbar = () => {
  const [drop, setDrop] = useState('hidden')  
   return (
     <>
-    <div className='sm:px-3 bg-slate-300  flex  fixed left-0 w-full px-2 z-10 h-16 sm:h-20'>
+    <div className='sm:px-3 sm:justify-around bg-slate-300  flex  fixed left-0 w-full px-2 z-10 h-16 sm:h-20'>
+
+    <div className='text-3xl sm:text-3xl sm:block hidden  m-auto  mx-2  '>
+        <p className='font-serif'>Kilogram</p>
+    </div>
 
         <div className='text-3xl sm:text-4xl  m-auto hover:text-blue-800 mx-2  '>
               <Link href={'/'} className=''> <SiHomeadvisor/> </Link> 

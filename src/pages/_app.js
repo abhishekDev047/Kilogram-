@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
     <Navbar />
     </div> 
 
-    <div className=' px-2 w-full'>
+    <div className=' px-2 w-full mt-2'>
   <Component {...pageProps} />
     </div>
   </div>
